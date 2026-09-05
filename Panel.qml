@@ -54,8 +54,19 @@ Panel {
   }
 
   function launchTilix() {
-    if (!root.installed) return
+    if (!root.installed) {
+      installApp()
+      return
+    }
     Quickshell.execDetached([root.tilixBin])
+    root.close()
+  }
+
+  function installApp() {
+    Quickshell.execDetached([
+      "omarchy-launch-floating-terminal-with-presentation",
+      "omarchy", "install", "tilix"
+    ])
     root.close()
   }
 
@@ -133,6 +144,7 @@ Panel {
       }
       onTextKey: function(t) {
         if (t === "o" || t === "O") root.launchTilix()
+        else if (t === "i" || t === "I") root.installApp()
         else if (t === "s" || t === "S") root.openSource()
       }
 
@@ -164,10 +176,10 @@ Panel {
 
         ActionRow {
           width: parent.width
-          title: root.installed ? "Open Tilix" : "Tilix is not installed"
-          hint: root.installed ? "Right-click the bar icon, or press O" : "omarchy install tilix"
+          title: root.installed ? "Open Tilix" : "Install Tilix"
+          hint: root.installed ? "Right-click the bar icon, or press O" : "Installs the terminal. Press I"
           selected: root.cursorActive && root.actionIndex === 0
-          enabled: root.installed
+          enabled: true
           onClicked: root.launchTilix()
         }
 

@@ -2,15 +2,23 @@
 
 **What it is.** [Cytracon Tilix](https://github.com/cytracon/tilix) is the tiling terminal for Omarchy: split panes, bookmarks, AI CLIs (Grok, Codex, or your own), and ops commands. Use it as Super+Return.
 
-This listing is a **Quickshell bar plugin**. It does **not** install Tilix. The **T** button shows the installed version; right-click opens the terminal when `~/.local/bin/tilix` is present. Install the app with `omarchy install tilix`.
+This plugin is the bar UI for that terminal: installed version, then a launch into Tilix. If Tilix is missing, the panel runs `omarchy install tilix` (terminal + this plugin).
 
-## Install the plugin
+## Install
+
+One command installs the **terminal and this plugin**:
+
+```bash
+omarchy install tilix
+```
+
+Or add the widget first, then click **Install Tilix** in the panel:
 
 ```bash
 omarchy plugin add https://github.com/cytracon/omarchy-tilix.git --enable
 ```
 
-The widget lands in the left bar section. Move it in Omarchy bar settings.
+The widget lands in the left bar section.
 
 ## Remove the plugin
 
@@ -61,10 +69,10 @@ Upstream: [gnunn1/tilix](https://github.com/gnunn1/tilix) (MPL-2.0). This plugin
 
 ## Security
 
-- No install hooks, daemons, privilege escalation, or network clients
-- No writes to Hyprland / GSettings / `xdg-terminals.list`
-- Left-click only toggles the panel
-- Right-click runs the fixed path `$HOME/.local/bin/tilix` when that file exists
+- No writes to Hyprland / GSettings / `xdg-terminals.list` from this plugin (the Tilix installer may set the default terminal)
+- Left-click toggles the panel
+- Right-click runs `$HOME/.local/bin/tilix`, or installs Tilix if missing
+- Install runs `omarchy install tilix` in a floating terminal
 - “Source” opens `https://github.com/cytracon/tilix` via `omarchy-launch-browser`
 
 Omarchy plugins run unsandboxed. Review `Panel.qml` before enabling.

@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Cytracon",
   "license": "MIT",
-  "description": "Tiling terminal for Omarchy (splits, bookmarks, AI CLIs). This plugin opens Cytracon Tilix and shows the installed version. The terminal is installed separately with omarchy install tilix.",
+  "description": "Tiling terminal for Omarchy (splits, bookmarks, AI CLIs). Opens Tilix and shows the installed version. If missing, the panel installs it.",
   "kinds": [
     "bar-widget"
   ],
@@ -15,7 +15,7 @@
   },
   "barWidget": {
     "displayName": "Tilix",
-    "description": "Open the Omarchy tiling terminal (splits, bookmarks, AI CLIs)",
+    "description": "Omarchy tiling terminal: open Tilix, or install it if missing"
     "category": "Terminal",
     "aliases": [
       "tilix",
