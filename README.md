@@ -22,22 +22,13 @@ Removal deletes only the plugin checkout under `~/.config/omarchy/plugins/`. It 
 
 ## Install Tilix (the terminal)
 
-User-local, no sudo. Preferred on Omarchy:
+User-local, no root. On Omarchy:
 
 ```bash
 omarchy install tilix
 ```
 
-Fallback from a clone of the public app repo:
-
-```bash
-git clone https://github.com/cytracon/tilix.git
-bash tilix/scripts/tilix-cytracon.sh
-```
-
-That writes `~/.local/libexec/tilix`, a Wayland wrapper at `~/.local/bin/tilix`, Hyprland rules, and `xdg-terminal-exec` keys so Super+Return can use Tilix.
-
-Uninstall the terminal with `tilix-cytracon uninstall` from that same script — not with `omarchy plugin remove`.
+That writes `~/.local/libexec/tilix`, a Wayland wrapper at `~/.local/bin/tilix`, Hyprland rules, and `xdg-terminal-exec` keys so Super+Return can use Tilix. App docs: [cytracon/tilix](https://github.com/cytracon/tilix). Removing this plugin does not uninstall Tilix.
 
 ## What the panel shows
 
@@ -70,7 +61,7 @@ Upstream: [gnunn1/tilix](https://github.com/gnunn1/tilix) (MPL-2.0). This plugin
 
 ## Security
 
-- No install hooks, daemons, sudo, or network clients
+- No install hooks, daemons, privilege escalation, or network clients
 - No writes to Hyprland / GSettings / `xdg-terminals.list`
 - Left-click only toggles the panel
 - Right-click runs the fixed path `$HOME/.local/bin/tilix` when that file exists
