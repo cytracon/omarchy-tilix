@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Cytracon",
   "license": "MIT",
-  "description": "Bar button and panel for Cytracon Tilix 1.9.8-cytracon.12: open the tiled Wayland terminal, show the installed version, and jump to the source. Tilix itself is installed separately.",
+  "description": "Tiling terminal for Omarchy (splits, bookmarks, AI CLIs). This plugin opens Cytracon Tilix and shows the installed version. The terminal is installed separately with omarchy install tilix.",
   "kinds": [
     "bar-widget"
   ],
@@ -15,7 +15,7 @@
   },
   "barWidget": {
     "displayName": "Tilix",
-    "description": "Open Cytracon Tilix and show version details",
+    "description": "Open the Omarchy tiling terminal (splits, bookmarks, AI CLIs)",
     "category": "Terminal",
     "aliases": [
       "tilix",

@@ -1,8 +1,8 @@
 # Tilix (Cytracon) — Omarchy plugin
 
-Omarchy Quattro bar widget for **[Cytracon Tilix](https://github.com/cytracon/tilix)** `1.9.8-cytracon.12`.
+**What it is.** [Cytracon Tilix](https://github.com/cytracon/tilix) is the tiling terminal for Omarchy: split panes, bookmarks, AI CLIs (Grok, Codex, or your own), and ops commands. Use it as Super+Return.
 
-This listing is a **Quickshell bar plugin**. It does **not** ship the GTK Tilix binary. Left-click opens a panel with the installed version; right-click launches Tilix when `~/.local/bin/tilix` is present.
+This listing is a **Quickshell bar plugin**. It does **not** install Tilix. The **T** button shows the installed version; right-click opens the terminal when `~/.local/bin/tilix` is present. Install the app with `omarchy install tilix`.
 
 ## Install the plugin
 
