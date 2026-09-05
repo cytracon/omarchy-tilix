@@ -100,7 +100,7 @@ Panel {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: "󰊍"
+    text: "T"
     tooltipText: "Tilix (Cytracon)"
     onPressed: function(buttonCode) {
       if (buttonCode === Qt.RightButton) root.launchTilix()
