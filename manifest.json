@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.cytracon.tilix",
+  "name": "Tilix (Cytracon)",
+  "version": "1.0.0",
+  "author": "Cytracon",
+  "license": "MIT",
+  "description": "Bar button and panel for Cytracon Tilix 1.9.8-cytracon.12: open the tiled Wayland terminal, show the installed version, and jump to the source. Tilix itself is installed separately.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "activation": "on-demand",
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Tilix",
+    "description": "Open Cytracon Tilix and show version details",
+    "category": "Terminal",
+    "aliases": [
+      "tilix",
+      "terminal",
+      "cytracon"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}
