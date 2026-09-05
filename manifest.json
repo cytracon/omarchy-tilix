@@ -15,7 +15,7 @@
   },
   "barWidget": {
     "displayName": "Tilix",
-    "description": "Omarchy tiling terminal: open Tilix, or install it if missing"
+    "description": "Omarchy tiling terminal: open Tilix, or install it if missing",
     "category": "Terminal",
     "aliases": [
       "tilix",
